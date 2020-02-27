@@ -1,7 +1,10 @@
 # Week 4 Web Mapping Course
 
 ## Topic:
-
+- Understanding how geospatial data is stored in the geojson format
+- How to use QGIS to convert shape files into geojson files and convert projection
+- How to map polygons on a map
+- How to include meta information about the polygons on the map
 
 ## Sample: Mapping Dog Runs in New York City
 - Data Source: [NYC Open Data](https://data.cityofnewyork.us/Recreation/NYC-Parks-Dog-Runs/8nac-uner)
