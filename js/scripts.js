@@ -122,7 +122,8 @@ map.on('style.load', function() {
              dogCountLookup('1200+').color,
            ]
          ]
-       }
+       },
+       'fill-opacity':0.75,
      }
    })
 
@@ -140,11 +141,13 @@ map.on('style.load', function() {
 
 // add a layer for dog Runs
 map.addLayer({
-  id:'fill-dog-runs',
+  id:'fill_dog_runs',
   type:'fill',
   source:'nyc-dog-runs',
+  before:['fill-dog-pop'],
   paint:{
     'fill-color': '#32CD32',
+    'fill-opacity':0.5,
   }
 })
 
