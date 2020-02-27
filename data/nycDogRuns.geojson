@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "nyc dog runs",
+  "name": "nyc_dog_runs",
   "crs": {
     "type": "name",
     "properties": {
