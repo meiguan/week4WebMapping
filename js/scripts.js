@@ -5,7 +5,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVpZ3VhbiIsImEiOiJjazZ1NmFtYmUwNmxpM21xczgza
 // we want to return to this point and zoom level after the user interacts
 // with the map, so store them in variables
 var initialCenterPoint = [-73.9968643,40.7060855]
-var initialZoom = 10
+var initialZoom = 12
 
 // create an object to hold the initialization options for a mapboxGL map
 var initOptions = {
@@ -75,12 +75,17 @@ map.on('style.load', function() {
     data: './data/dogs.geojson',
   });
 
+  map.addSource('nyc_dog_runs', {
+    type: 'geojson',
+    data: './data/nycDogRuns.geojson',
+  });
+
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
 
   // add a layer for our custom source
    map.addLayer({
-     id: 'fill-dog-pop',
+     id: 'nyc_dog_pop',
      type: 'fill',
      source: 'nyc_dog_pop',
      paint: {
@@ -132,6 +137,16 @@ map.on('style.load', function() {
         'line-width': 0.5,
           }
     });
+
+    map.addLayer({
+      id: 'fill-dog_runs',
+      type: 'fill',
+      source: 'nyc_dog_runs',
+      paint: {
+        'fill-color': '#66ff00',
+      }
+    });
+
 
     // add an empty data source, which we will use to highlight the lot the user is hovering over
   map.addSource('highlight-feature', {
