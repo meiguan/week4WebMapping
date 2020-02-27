@@ -17,20 +17,14 @@ body {
   right: 0;
   left: 300px;
 }
-/* attempt to add marker */
-.marker {
-  background-image: url('college-15.svg');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 
 h3 {
   margin-top: 0;
   font-size: 1.8rem;
+}
+
+.mapboxgl-marker:hover {
+  cursor: pointer;
 }
 
 /* blue buttons with white bold text */
@@ -51,6 +45,12 @@ button:hover {
   background-color: #006987;
 }
 
+#feature-info {
+  background: #41779c;
+  padding: 15px;
+  min-height: 150px;
+}
+
 /* sidebar is fixed with and positioned to the left */
 #sidebar {
   position: absolute;
@@ -58,7 +58,7 @@ button:hover {
   top: 0;
   bottom: 0;
   width: 300px;
-  background-color: #404040;
+  background-color: #0a99c3;
   color: #FFF;
   padding: 25px;
   box-sizing: border-box;

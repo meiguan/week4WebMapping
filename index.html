@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta charset='utf-8' />
-      <title>College Map</title>
+      <title>NYC Dog Runs</title>
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
       <link href='css/styles.css' rel='stylesheet' />
@@ -10,30 +10,13 @@
   <body>
     <!-- the sidebar is fixed width and will contain a title, some text, and buttons -->
     <div id='sidebar'>
-    <h3>Colleges & Universities</h3>
-    <h2>New York State</h2>
+      <h3>Map of NYC Dog Runs</h3>
+      <p>This map shows MapPLUTO data for the community district color-coded by land use code.</p>
 
-    <p></p>
-    <hr/>
-
-    <p>Markers indicate the locations of the main campuses for 460+ colleges and universities located in New York State.</p>
-    <p>👆Click the buttons below to fly to different parts of the state.</p>
-
-    <br/>
-    <!-- Buttons for flying the map -->
-    <button class='flyto-button' id="NewYorkCity">New York City</button>
-    <br/>
-
-    <button class='flyto-button' id="FingerLakes">Finger Lakes</button>
-    <br/>
-
-    <button class='flyto-button' id="Albany">Albany</button>
-    <br/>
-
-    <button class='flyto-button' id="Buffalo">Buffalo</button>
-    <p><small>Location data sourced from <a href = "https://educationdata.urban.org/documentation/" style="color:#48C9B0;">Urban Institute's Education Data API.</a></small></p>
+      <div id='feature-info'>
+      </div>
     </div>
-
+    <!-- close sidebar -->
     <!-- this is the map container, which will hold the mapboxGL map -->
     <div id='map-container'></div>
 
@@ -43,7 +26,6 @@
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
-    <script src='js/data.js'></script>
     <script src='js/scripts.js'></script>
 
   </body>
